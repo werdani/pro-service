@@ -1,31 +1,21 @@
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.viewsets import ReadOnlyModelViewSet
 from .models import Product
 from .serializers import ProductSerializer
-from rest_framework.response import Response
-from rest_framework.decorators import api_view ,permission_classes
-from rest_framework.permissions import IsAuthenticated
+from rest_framework import filters
 
 
-
-#Function to view all products.
-@api_view(['GET'])
-@permission_classes([IsAuthenticated])
-def all_product(request):
-    all_produc = Product.objects.all()
-    data = ProductSerializer(all_produc, many=True).data
-    return Response({'data':data})
-
-
-@api_view(['GET'])
-def product_filter(request,user):
-    all_produc = Product.objects.filter(fieldname='user')
-    data = ProductSerializer(all_produc, many=True).data
-    return Response({'data':data})
+class ProductViewSet(ReadOnlyModelViewSet):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+    permission_classes = [IsAuthenticated]
+    filter_backends = [DjangoFilterBackend, filters.OrderingFilter]
+    filterset_fields = [
+        "user",
+    ]
+    ordering_fields = [
+        "price",
+    ]
 
 
-
-#Function to arrange products by price. 
-@api_view(['GET'])
-def price_order(request):
-    product = Product.objects.all().order_by('price')
-    data = ProductSerializer(product, many=True).data
-    return Response({'data':data})
