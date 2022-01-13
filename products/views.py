@@ -8,7 +8,7 @@ from rest_framework.permissions import IsAuthenticated
 
 #Function to view all products.
 @api_view(['GET'])
-#@permission_classes([IsAuthenticated])
+@permission_classes([IsAuthenticated])
 def all_product(request):
     all_produc = Product.objects.all()
     data = ProductSerializer(all_produc, many=True).data
