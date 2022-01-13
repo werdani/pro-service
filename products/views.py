@@ -17,5 +17,3 @@ class ProductViewSet(ReadOnlyModelViewSet):
     ordering_fields = [
         "price",
     ]
-
-
