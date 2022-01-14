@@ -14,16 +14,16 @@
 <p>https://documenter.getpostman.com/view/13014200/UVXjJvrZ</p>
 
 <h3>How to Install and Run the Project in windows :</h3>
-<p>Create a virtual environment on the desktop, for example 'env' .</p>
-<p>write this command in CMD to create it :- ' virtualenv env ' .</p>
-<p>open folder 'env' and acvtivate virtualenv using this command : '.\Scripts\activate' .</p>
-<p>clone my project using this command : git clone "https://github.com/werdani/pro-service.git" .</p>
-<p>cd 'pro-service' and install requirments using this command : pip install requirment.txt .</p>
-<p>now need to create database in PostgreSQL using this name 'productss' .</p>
-<p>'USER': 'postgres', 'PASSWORD': 'postgres', 'HOST': 'localhost', 'PORT': '5432' .</p>
-<p>need to makemigrations using this command in CMD : 'python manage.py makemigrations' .</p>
-<p>need to migrate using this command in CMD : 'python manage.py migrate' .</p>
-<p>now database is ready to add products, but now you need to create a superuser .</p>
-<p>to create superuser write this command in CMD: 'python mange.py createsuperuser' . </p>
-
-
+<ul style="list-style-type:circle">
+  <li>Create a virtual environment on the desktop, for example 'env' .</li>
+  <li>write this command in CMD to create it :- ' virtualenv env ' .</li>
+  <li>open folder 'env' and acvtivate virtualenv using this command : '.\Scripts\activate' .</li>
+  <li>clone my project using this command : git clone "https://github.com/werdani/pro-service.git" .</li>
+  <li>cd 'pro-service' and install requirments using this command : pip install requirment.txt .</li>
+  <li>now need to create database in PostgreSQL using this name 'productss' .</li>
+  <li>'USER': 'postgres', 'PASSWORD': 'postgres', 'HOST': 'localhost', 'PORT': '5432' .</li>
+  <li>need to makemigrations using this command in CMD : 'python manage.py makemigrations' .</li>
+  <li>need to migrate using this command in CMD : 'python manage.py migrate' .</li>
+  <li>now database is ready to add products, but now you need to create a superuser .</li>
+  <li>to create superuser write this command in CMD: 'python mange.py createsuperuser' . </li>
+</ul>
