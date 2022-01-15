@@ -7,7 +7,6 @@
   <li>Django Rest framework .</li>
   <li>PostgreSQL database .</li>
   <li>linter flake8 .</li>
-  <li>Postman .</li>
 </ul>
 
 <h3>API documentation </h3>
